@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+
+    <title>Calendar</title>
+
+    <link href="stylesheets/core/jquery-ui.css" rel="stylesheet" />
+    <link href="stylesheets/core/jquery.ui.theme.css" rel="stylesheet" />
+
+    <link href="stylesheets/core/timelineScheduler.css" rel="stylesheet" />
+    <link href="stylesheets/core/timelineScheduler.styling.css" rel="stylesheet" />
+    <link href="stylesheets/core/calendar.css" rel="stylesheet" />
+    <link href='stylesheets/core/simple-scrollbar.css' rel='stylesheet' />
+    <link href='stylesheets/core/jquery.timepicker.min.css' rel='stylesheet' />
+    <link href='stylesheets/core/font-awesome.min.css' rel='stylesheet' />
+    <link href='/dist/css/default.css' rel='stylesheet' />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="javascripts/moment.min.js"></script>
+    <script src="javascripts/jquery-1.12.4.min.js"></script>
+    <script src="javascripts/jquery-ui-1.12.1.min.js"></script>
+    <script src="javascripts/timelineScheduler.js"></script>
+    <script src="javascripts/calendar.js"></script>
+    <script src="javascripts/simple-scrollbar.js"></script>
+    <script src="javascripts/jquery.timepicker.min.js"></script>
+    <script src="javascripts/userScript.js"></script>
+    <meta charset="UTF-8">
+    <!-- [if IE 9]> <script src = "javscripts/classList.min.js"> </ script> <! [endif]-->
+</head>
+<body>
+<div class="main-content">
+    <div class="calendar-fill-header">
+        <div >ユザー</div>
+        <div class="btn">ジョブ</div>
+        <div class="btn move-date-btn" data-key="prev-month"><<</div>
+        <div class="btn move-date-btn" data-key="prev-day"><</div>
+        <div class="btn today">今日</div>
+        <div class="btn move-date-btn" data-key="next-day">></div>
+        <div class="btn move-date-btn" data-key="next-month">>></div>
+        <div class="btn move-calendar" >移動</div>
+    </div>
+    <div class="calendar">
+
+    </div>
+    <div class="realtime-info">
+
+    </div>
+</div>
+<div class="right-side-bar">
+    <div class="eventBar item-status-one" data-class="item-status-one">
+        <div class="title">プロジェクトA</div><div class="sub-info">情報</div>
+    </div>
+    <div class="eventBar item-status-two" data-class="item-status-two">
+        <div class="title">プロジェクトB</div><div class="sub-info">情報</div>
+    </div>
+    <div class="eventBar item-status-three" data-class="item-status-three">
+        <div class="title">プロジェクトC</div>
+    </div>
+    <div class="eventBar" data-class="item-status-none">
+        <div class="title">プロジェクトD</div><div class="sub-info">情報</div>
+    </div>
+</div>
+
+<div class="event-save-popup">
+    <div class="popup-header">
+        <div class="row ">
+            <div class="row date-div"><div class="table-style "><div class="date border-div start-date">2017-10-25</div><div class="date-image"></div></div></div>
+            <div class="row date-div2"><div class="table-style "><div class="date border-div "><input class="end-date" type="text" value="1"></div><div class="date-image2"><i class="fa fa-sort-up fa-2x" aria-hidden="true"></i><i class="fa fa-sort-down fa-2x" aria-hidden="true"></i></div></div></div><div class="vertical-top">日</div>
+        </div>
+    </div>
+    <div class="popup-content">
+        <div class="row">
+            <div class="text-div">
+                ジョブ名 :
+            </div>
+            <div class="form-div">
+                <input tyle="text" class="project-name">
+            </div>
+        </div>
+        <div class="row">
+            <div class="text-div">
+                作業時間 :
+            </div>
+            <div class="form-div time-div">
+                <input tyle="text" class="start-time" onkeydown="event.preventDefault();" >&nbsp;から
+                <input tyle="text" class="end-time" onkeydown="event.preventDefault();" >&nbsp;まで
+            </div>
+        </div>
+        <div class="row">
+            <div class="text-div vertical-top" >
+                詳細:
+            </div>
+            <div class="form-div">
+                <textarea resize="false" class="sub-info"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="popup-footer">
+        <div class="row">
+            <button class="btn change hide">変更</button>
+            <button class="btn remove hide">削除</button>
+            <button class="btn save">保存</button>
+            <button class="btn cancel">キャンセル</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
